@@ -1,4 +1,4 @@
-import Spinner from './spinner.vue'
+import ShrinkRect from './shrink-rect.vue'
 import DoubleBounce from './double-bounce.vue'
 import Bounce from './bounce.vue'
 import Loop from './loop.vue'
@@ -8,7 +8,7 @@ import ScaleOut from './scale-out.vue'
 import DoubleCube from './double-cube.vue'
 
 export default {
-  Spinner,
+  ShrinkRect,
   DoubleBounce,
   Bounce,
   Loop,

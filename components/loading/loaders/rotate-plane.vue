@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div :style="{ backgroundColor:color }" class="spinner"></div>
+    <div :style="{
+      backgroundColor: color,
+      width: size+20+'px',
+      height: size+20+'px' }" class="spinner"></div>
   </div>
 </template>
 
@@ -8,17 +11,16 @@
 export default {
   name: 'RotatePlane',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  width: 60px;
-  height: 60px;
+  margin: 25px auto;
  
-  margin: 100px auto;
   -webkit-animation: rotateplane 1.2s infinite ease-in-out;
   animation: rotateplane 1.2s infinite ease-in-out;
 }

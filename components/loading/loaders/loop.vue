@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :style="{
+      width: size+'px',
+      height: size+'px'
+    }">
       <div class="spinner-container container1">
         <div :style="{ backgroundColor:color }" class="circle1"></div>
         <div :style="{ backgroundColor:color }" class="circle2"></div>
@@ -27,16 +30,15 @@
 export default {
   name: 'Loop',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  margin: 100px auto;
-  width: 40px;
-  height: 40px;
+  margin: 25px auto;
   position: relative;
 }
  

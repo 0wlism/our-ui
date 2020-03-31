@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :style="{
+      width: size+20+'px',
+      height: size+20+'px'
+    }">
       <div :style="{ backgroundColor:color }" class="rect1"></div>
       <div :style="{ backgroundColor:color }" class="rect2"></div>
       <div :style="{ backgroundColor:color }" class="rect3"></div>
@@ -12,18 +15,17 @@
 
 <script>
 export default {
-  name: 'Spinner',
+  name: 'ShrinkRect',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  margin: 100px auto;
-  width: 50px;
-  height: 60px;
+  margin: 25px auto;
   text-align: center;
   font-size: 10px;
 }

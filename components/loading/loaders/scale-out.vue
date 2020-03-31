@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div :style="{ backgroundColor: color }" class="spinner"></div>
+    <div :style="{
+      backgroundColor: color,
+      width: size+40+'px',
+      height: size+40+'px' }" class="spinner"></div>
   </div>
 </template>
 
@@ -8,16 +11,15 @@
 export default {
   name: 'ScaleOut',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  width: 60px;
-  height: 60px;
-  margin: 100px auto;
+  margin: 25px auto;
  
   border-radius: 100%; 
   -webkit-animation: scaleout 1.0s infinite ease-in-out;

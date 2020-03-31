@@ -1,6 +1,9 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :style="{
+      width: size+40+'px',
+      height: size+40+'px'
+    }">
       <div :style="{ backgroundColor:color }" class="dot1"></div>
       <div :style="{ backgroundColor:color }" class="dot2"></div>
     </div>
@@ -11,16 +14,15 @@
 export default {
   name: 'DoubleDot',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  margin: 100px auto;
-  width: 90px;
-  height: 90px;
+  margin: 25px auto;
   position: relative;
   text-align: center;
    

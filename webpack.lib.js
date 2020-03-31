@@ -13,7 +13,7 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, './lib'),
     filename: '[name].min.js',
-    library: 'OurUi',
+    library: '[name]',
     libraryTarget: 'umd',
     libraryExport: 'default'
     // umdNamedDefine: true

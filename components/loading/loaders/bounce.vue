@@ -1,6 +1,8 @@
 <template>
   <div>
-    <div class="spinner">
+    <div class="spinner" :style="{
+      width: size + 110 + 'px',
+    }">
       <div :style="{ backgroundColor:color }" class="bounce1"></div>
       <div :style="{ backgroundColor:color }" class="bounce2"></div>
       <div :style="{ backgroundColor:color }" class="bounce3"></div>
@@ -12,14 +14,15 @@
 export default {
   name: 'Bounce',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  width: 150px;
+  margin: 25px auto;
   text-align: center;
 }
  

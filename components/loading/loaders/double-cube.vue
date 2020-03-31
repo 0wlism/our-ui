@@ -1,8 +1,11 @@
 <template>
   <div>
-    <div class="spinner">
-      <div :style="{ backgroundColor:color }" class="cube1"></div>
-      <div :style="{ backgroundColor:color }" class="cube2"></div>
+    <div class="spinner" :style="{
+      width: size+'px',
+      height: size+'px'
+    }">
+      <div :style="{ backgroundColor:color,width:size-10+'px',height:size-10+'px'}" class="cube1"></div>
+      <div :style="{ backgroundColor:color,width:size-10+'px',height:size-10+'px'}" class="cube2"></div>
     </div>
   </div>
 </template>
@@ -11,23 +14,20 @@
 export default {
   name: 'DoubleCube',
   props: {
-    color: String
+    color: String,
+    size: Number
   }
 }
 </script>
 
 <style scoped>
 .spinner {
-  margin: 100% auto;
-  width: 32px;
-  height: 32px;
+  margin: 50% auto;
   position: relative;
   transform: translate(-50%, -50%);
 }
  
 .cube1, .cube2 {
-  width: 30px;
-  height: 30px;
   position: absolute;
   top: 0;
   left: 0;

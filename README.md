@@ -71,3 +71,46 @@ export default {
   components: { OurLoading }
 }
 ```
+---
+
+## 组件列表
+
+> 参考了[vue-element-loading](<https://github.com/biigpongsatorn/vue-element-loading/blob/master/README.md>)，所以配置项差不多
+
+### OurLoading
+
+| Props            | Type    | Default                 | Description                                                  |
+| ---------------- | ------- | ----------------------- | ------------------------------------------------------------ |
+| active           | Boolean | false                   | 控制是否显示                                                 |
+| spinner          | String  | loop                    | 加载的内置图型样式：bounce，double-bounce，double-cube，double-dot，loop，rotate-plane，scale-out，shrink-rect |
+| color            | String  | #000                    | 加载的内置图型样式的颜色                                     |
+| background-color | String  | rgba(255, 255, 255, .9) | 加载蒙板的背景色                                             |
+| size             | Number  | 40                    | 加载的内置图型样式的大小（对自定义的加载图型无效）           |
+| is-full-screen   | Boolean | false                   | 控制加载动画是否全屏展示                                     |
+| text             | String  |                         | 自定义文本，显示在加载图标下方                               |
+| text-style       | Object  | {}                      | 自定义文本的样式，接收一个js样式对象                         |
+
+#### 例子
+
+直接使用
+
+```html
+<template>
+  <div>
+    <OurLoading spinner='double-cube' isFullScreen active text="loading..." />
+  </div>
+</template>
+```
+
+自定义加载动画
+
+```html
+<template>
+  <div>
+      <our-loading active >
+          <img  src="../static/loader.gif" />
+      </our-loading>
+  </div>
+</template>
+```
+

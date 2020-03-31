@@ -13,7 +13,7 @@
           <component
             :is="spinner"
             :color="color"
-            :size="`${size}px`"
+            :size="size"
           />
         </slot>
         <div
@@ -37,7 +37,7 @@ export default {
     active: Boolean,
     spinner: {
       type: String,
-      default: 'spinner'
+      default: 'loop'
     },
     text: {
       type: String,
@@ -62,8 +62,8 @@ export default {
       default: 'rgba(255, 255, 255, .9)'
     },
     size: {
-      type: String,
-      default: '40'
+      type: Number,
+      default: 40
     }
   },
   data () {
