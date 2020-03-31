@@ -5,7 +5,8 @@
 </template>
 
 <script>
-import OurLoading from '../components/loading'
+import { OurLoading } from '../src/index.js'
+console.log(OurLoading);
 
 export default {
   components: { OurLoading }

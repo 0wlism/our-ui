@@ -1,8 +1,10 @@
-const components = {
-  Button
-}
+import ourLoading from '../components/loading'
 
-const install = function(Vue, ) {
+const components = [
+  ourLoading
+]
+
+export const install = function(Vue, ) {
   components.forEach(component => {
     Vue.component(component.name, component);
   })
@@ -12,7 +14,4 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-export default {
-  install,
-  Button
-}
+export const OurLoading = ourLoading
