@@ -1,0 +1,35 @@
+{
+  "name": "our-ui",
+  "version": "1.0.0",
+  "description": "一款基于tailwind 和 vue 的 UI 组件库",
+  "main": "lib/vue-tailwind-ui.min.js",
+  "scripts": {
+    "dev": "webpack-dev-server --config webpack.dev.js --open",
+    "build:demo": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config webpack.prod.js",
+    "build:lib": "rm -rf ./lib  && cross-env NODE_ENV=production LIB=true webpack --config webpack.lib.js"
+  },
+  "author": "0wlism",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.4.2",
+    "html-webpack-plugin": "^4.0.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "postcss-loader": "^3.0.0",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-loader": "^15.9.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "tailwindcss": "^1.2.0",
+    "vue": "^2.6.11"
+  }
+}

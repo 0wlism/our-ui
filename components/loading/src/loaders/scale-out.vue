@@ -1,0 +1,45 @@
+<template>
+  <div>
+    <div :style="{ backgroundColor: color }" class="spinner"></div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'ScaleOut',
+  props: {
+    color: String
+  }
+}
+</script>
+
+<style scoped>
+.spinner {
+  width: 60px;
+  height: 60px;
+  margin: 100px auto;
+ 
+  border-radius: 100%; 
+  -webkit-animation: scaleout 1.0s infinite ease-in-out;
+  animation: scaleout 1.0s infinite ease-in-out;
+}
+ 
+@-webkit-keyframes scaleout {
+  0% { -webkit-transform: scale(0.0) }
+  100% {
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+ 
+@keyframes scaleout {
+  0% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 100% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+    opacity: 0;
+  }
+}
+</style>
