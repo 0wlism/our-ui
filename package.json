@@ -3,12 +3,25 @@
   "version": "1.0.0",
   "description": "一款基于tailwind 和 vue 的 UI 组件库",
   "main": "lib/vue-tailwind-ui.min.js",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/0wlism/our-ui.git"
+  },
   "scripts": {
     "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build:demo": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "build:lib": "rm -rf ./lib  && cross-env NODE_ENV=production LIB=true webpack --config webpack.lib.js"
   },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
   "author": "0wlism",
+  "keywords": [ "vue", "tailwind", "ui", "our-ui" ],
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.9.0",

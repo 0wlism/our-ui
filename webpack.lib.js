@@ -8,7 +8,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = merge(common, {
   mode: 'production',
   entry: {
-    'our-ui': path.join(__dirname, './src/index.js')
+    'our-ui': path.join(__dirname, './src/index.js'),
+    'our-ui': path.join(__dirname, './src/assets/tailwindcss.css')
   },
   output: {
     path: path.join(__dirname, './lib'),
