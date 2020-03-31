@@ -1,10 +1,12 @@
-import ourLoading from '../components/loading'
+import './tailwindcss.css'
+
+import OurLoading from '../components/loading/index.vue'
 
 const components = [
-  ourLoading
+  OurLoading
 ]
 
-export const install = function(Vue, ) {
+const install = function(Vue) {
   components.forEach(component => {
     Vue.component(component.name, component);
   })
@@ -14,4 +16,9 @@ if (typeof window !== 'undefined' && window.Vue) {
   install(window.Vue);
 }
 
-export const OurLoading = ourLoading
+export default {
+  install,
+  OurLoading
+}
+
+export const A = 2;

@@ -5,8 +5,7 @@
 </template>
 
 <script>
-import { OurLoading } from '../src/index.js'
-console.log(OurLoading);
+import { OurLoading } from '../lib/our-ui.min.js'
 
 export default {
   components: { OurLoading }

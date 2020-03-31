@@ -8,16 +8,15 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = merge(common, {
   mode: 'production',
   entry: {
-    'our-ui': path.join(__dirname, './src/index.js'),
-    'our-ui': path.join(__dirname, './src/assets/tailwindcss.css')
+    'our-ui': path.join(__dirname, './src/index.js')
   },
   output: {
     path: path.join(__dirname, './lib'),
     filename: '[name].min.js',
-    library: '[name]',
+    library: 'OurUi',
     libraryTarget: 'umd',
-    libraryExport: 'default',
-    umdNamedDefine: true
+    libraryExport: 'default'
+    // umdNamedDefine: true
   },
   externals: {
     vue: 'vue'
@@ -27,7 +26,7 @@ module.exports = merge(common, {
     minimizer: [
       new OptimizeCSSAssetsPlugin({}),
       new UglifyJsPlugin({
-        sourceMap: true,
+        sourceMap: false,
         parallel: 4
       })
     ]
