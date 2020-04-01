@@ -75,9 +75,24 @@ export default {
 
 ## 组件列表
 
-> 参考了[vue-element-loading](<https://github.com/biigpongsatorn/vue-element-loading/blob/master/README.md>)，所以配置项差不多
+### GoTop
 
-### OurLoading
+| Props       | Type   | Default | Description                                                 |
+| ----------- | ------ | ------- | ----------------------------------------------------------- |
+| scrollY     | Number | 1000    | 控制滚动到距离视口上方多少显示组件，如果设置为0，则永久显示 |
+| scrollSpeed | Number | 100     | 滚动到上方的速度                                            |
+| color       | String | #000    | 内置图标的颜色                                              |
+| right       | Number | 50      | 距离视口右边的距离                                          |
+| bottom      | Number | 50      | 距离视口下边的距离                                          |
+| width       | Number | 12      | 图标的宽度                                                  |
+| height      | Number | 12      | 图标的高度                                                  |
+| zIndex      | Number | 1000    | 层级                                                        |
+
+> 最好在项目的布局组件里引入，如果有布局组件的话
+
+### Loading
+
+> 参考了[vue-element-loading](<https://github.com/biigpongsatorn/vue-element-loading/blob/master/README.md>)，所以配置项差不多
 
 | Props            | Type    | Default                 | Description                                                  |
 | ---------------- | ------- | ----------------------- | ------------------------------------------------------------ |
@@ -90,13 +105,14 @@ export default {
 | text             | String  |                         | 自定义文本，显示在加载图标下方                               |
 | text-style       | Object  | {}                      | 自定义文本的样式，接收一个js样式对象                         |
 
+
 #### 例子
 
 直接使用
 
 ```html
 <template>
-  <div>
+  <div class='parent'>
     <OurLoading spinner='double-cube' isFullScreen active text="loading..." />
   </div>
 </template>
@@ -106,11 +122,13 @@ export default {
 
 ```html
 <template>
-  <div>
+  <div class='parent'>
       <our-loading active >
           <img  src="../static/loader.gif" />
       </our-loading>
   </div>
 </template>
 ```
+
+> 注意要给父元素设置一个宽高
 

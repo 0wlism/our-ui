@@ -1,9 +1,11 @@
 import './tailwindcss.css'
 
 import OurLoading from '../components/loading/index.vue'
+import OurGoTop from '../components/gotop/index.vue'
 
 const components = [
-  OurLoading
+  OurLoading,
+  OurGoTop
 ]
 
 const install = function(Vue) {
@@ -18,7 +20,6 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   install,
-  OurLoading
+  OurLoading,
+  OurGoTop
 }
-
-export const A = 2;

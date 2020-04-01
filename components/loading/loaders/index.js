@@ -17,3 +17,15 @@ export default {
   ScaleOut,
   DoubleCube
 }
+
+// export default {
+//   ShrinkRect: () => import('./shrink-rect.vue'),
+//   DoubleBounce: () => import('./double-bounce.vue'),
+//   Bounce: () => import('./bounce.vue'),
+//   Loop: () => import('./loop.vue'),
+//   RotatePlane: () => import('./rotate-plane.vue'),
+//   DoubleDot: () => import('./double-dot.vue'),
+//   ScaleOut: () => import('./scale-out.vue'),
+//   DoubleCube: () => import('./double-cube.vue')
+// }
+

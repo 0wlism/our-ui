@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from '../router'
 
 // dev开发
 import '../src/tailwindcss.css'
@@ -14,6 +15,7 @@ Vue.use(OurUi)
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
 
