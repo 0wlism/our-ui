@@ -105,6 +105,9 @@ export default {
 | text             | String  |                         | 自定义文本，显示在加载图标下方                               |
 | text-style       | Object  | {}                      | 自定义文本的样式，接收一个js样式对象                         |
 
+#### 加载样式
+
+![加载样式](<https://raw.githubusercontent.com/0wlism/our-ui/master/static/loaders.png>)
 
 #### 例子
 
