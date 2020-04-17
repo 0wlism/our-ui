@@ -21,8 +21,7 @@ module.exports = merge(common, {
     // umdNamedDefine: true
   },
   externals: {
-    vue: 'vue',
-    vueRouter: 'vue-router'
+    vue: 'vue'
   },
   devtool: 'source-map',
   optimization: {

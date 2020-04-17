@@ -3,7 +3,7 @@ const webpack = require('webpack')
 
 module.exports = {
   entry: {
-    vendor: ['vue', 'vue-router']
+    vendor: ['vue']
   },
   node: {
     fs: "empty"
