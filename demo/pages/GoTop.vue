@@ -1,9 +1,9 @@
 <template>
   <div>
+    <div class="our-h-screen our-w-full"></div>
+    <div class="our-h-screen our-w-full"></div>
+    <div class="our-h-screen our-w-full"></div>
     <OurGoTop />
-    <div class="our-h-screen our-w-full"></div>
-    <div class="our-h-screen our-w-full"></div>
-    <div class="our-h-screen our-w-full"></div>
   </div>
 </template>
 

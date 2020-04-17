@@ -1,4 +1,5 @@
 const path = require('path')
+const os = require('os')
 const webpack = require('webpack')
 const merge = require('webpack-merge')
 const common = require('./webpack.common.js')
@@ -13,13 +14,15 @@ module.exports = merge(common, {
   output: {
     path: path.join(__dirname, './lib'),
     filename: '[name].min.js',
+    chunkFilename: '[id].chunk.[hash].js',
     library: '[name]',
     libraryTarget: 'umd',
     libraryExport: 'default'
     // umdNamedDefine: true
   },
   externals: {
-    vue: 'vue'
+    vue: 'vue',
+    vueRouter: 'vue-router'
   },
   devtool: 'source-map',
   optimization: {
@@ -27,7 +30,12 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({}),
       new UglifyJsPlugin({
         sourceMap: false,
-        parallel: 4
+        parallel: os.cpus().length, // 并发数
+        uglifyOptions: {
+          output: {
+            comments: false,
+          }
+        }
       })
     ]
   }

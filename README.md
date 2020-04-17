@@ -82,10 +82,10 @@ export default {
 | scrollY     | Number | 1000    | 控制滚动到距离视口上方多少显示组件，如果设置为0，则永久显示 |
 | scrollSpeed | Number | 100     | 滚动到上方的速度                                            |
 | color       | String | #000    | 内置图标的颜色                                              |
-| right       | Number | 50      | 距离视口右边的距离                                          |
+| right       | Number | 30      | 距离视口右边的距离                                          |
 | bottom      | Number | 50      | 距离视口下边的距离                                          |
-| width       | Number | 12      | 图标的宽度                                                  |
-| height      | Number | 12      | 图标的高度                                                  |
+| width       | Number | 50      | 图标的宽度                                                  |
+| height      | Number | 50      | 图标的高度                                                  |
 | zIndex      | Number | 1000    | 层级                                                        |
 
 > 最好在项目的布局组件里引入，如果有布局组件的话
@@ -107,7 +107,7 @@ export default {
 
 #### 加载样式
 
-![加载样式](<https://raw.githubusercontent.com/0wlism/our-ui/master/static/loaders.png>)
+![加载样式](https://raw.githubusercontent.com/0wlism/our-ui/master/static/loaders.png)
 
 #### 例子
 

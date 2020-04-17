@@ -1,14 +1,16 @@
 const path = require('path')
+// const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: {
-    'our-ui': path.join(__dirname, './demo/main.js')
+    'our-ui': [path.join(__dirname, './demo/main.js')]
   },
   output: {
     path: path.join(__dirname, './dist'),
     filename: 'bundle.js',
+    chunkFilename: process.env.NODE_ENV === 'production' ? '[id].chunk.[hash].js' : '[id].chunk.js',
     libraryTarget: 'umd',
     libraryExport: 'default'
   },
@@ -19,14 +21,19 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+        exclude: /(node_modules| bower_components)/, // 为了增加构造速度
+        loader: 'babel-loader?cacheDirectory=true'
       },
       {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          MiniCssExtractPlugin.loader,
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              esModule: true,
+            }
+          },
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -43,9 +50,13 @@ module.exports = {
     ]
   },
   plugins: [
+    // new webpack.DllReferencePlugin({
+    //   context: __dirname,
+    //   manifest: require('./vendor/manifest.json')
+    // }),
     new MiniCssExtractPlugin({
       filename: process.env.NODE_ENV === 'production' ? '[name].min.css' : '[name].css',
-      chunkFilename: process.env.NODE_ENV === 'production' ? '[id].min.[hash].css' : '[id].css'
+      chunkFilename: process.env.NODE_ENV === 'production' ? '[id].chunk.[hash].css' : '[id].chunk.css'
     }),
     new VueLoaderPlugin()
   ]

@@ -4,8 +4,8 @@
       v-show="isShow"
       @click="goTop"
       :style="{
-        width: `${right}px`,
-        height: `${right}px`,
+        width: `${width}px`,
+        height: `${height}px`,
         right: `${right}px`,
         bottom: `${bottom}px`,
         zIndex: zIndex
@@ -14,10 +14,8 @@
       <div class="our-center">
         <slot name="default">
           <div>
-            <svg
-              t="1585735302372" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="9495" width="50" height="50">
-              <path :fill="color" d="M984.832 513.792 510.848 0.192 509.76 1.28 508.608 0 39.168 505.408 140.352 614.144 515.2 210.432 889.984 616.512Z" p-id="9496"></path>
-              <path :fill="color" d="M984.832 921.024 510.848 407.424 509.76 408.512 508.608 407.232 39.168 912.64 140.352 1021.376 515.2 617.664 889.984 1023.808Z" p-id="9497"></path>
+            <svg t="1587113576016" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2222" :width="width" :height="height">
+              <path :fill="color" d="M523.955 297.952l323.744 512c6.24 9.856 6.624 22.336 0.992 32.512-5.632 10.24-16.384 16.576-28.033 16.576l-647.328 0c-11.647 0-22.4-6.336-28.033-16.576-2.656-4.8-3.968-10.112-3.968-15.424 0-5.952 1.664-11.904 4.929-17.088l323.616-512c5.856-9.28 16.064-14.911 27.04-14.912s21.184 5.632 27.04 14.912z" p-id="2223"></path>
             </svg>
           </div>
         </slot>
@@ -38,15 +36,15 @@ export default {
   props: {
     width: {
       type: Number,
-      default: 12
+      default: 50
     },
     height: {
       type: Number,
-      default: 12
+      default: 50
     },
     right: {
       type: Number,
-      default: 50
+      default: 30
     },
     bottom: {
       type: Number,
