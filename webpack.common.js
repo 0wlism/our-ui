@@ -50,10 +50,6 @@ module.exports = {
     ]
   },
   plugins: [
-    // new webpack.DllReferencePlugin({
-    //   context: __dirname,
-    //   manifest: require('./vendor/manifest.json')
-    // }),
     new MiniCssExtractPlugin({
       filename: process.env.NODE_ENV === 'production' ? '[name].min.css' : '[name].css',
       chunkFilename: process.env.NODE_ENV === 'production' ? '[id].chunk.[hash].css' : '[id].chunk.css'

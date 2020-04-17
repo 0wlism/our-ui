@@ -20,9 +20,6 @@ module.exports = merge(common, {
     libraryExport: 'default'
     // umdNamedDefine: true
   },
-  externals: {
-    vue: 'vue'
-  },
   devtool: 'source-map',
   optimization: {
     minimizer: [
