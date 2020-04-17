@@ -92,7 +92,7 @@ export default {
 
 ### Loading
 
-> 参考了[vue-element-loading](<https://github.com/biigpongsatorn/vue-element-loading/blob/master/README.md>)，所以配置项差不多
+> 参考了[vue-element-loading](https://github.com/biigpongsatorn/vue-element-loading/blob/master/README.md)，所以配置项差不多
 
 | Props            | Type    | Default                 | Description                                                  |
 | ---------------- | ------- | ----------------------- | ------------------------------------------------------------ |

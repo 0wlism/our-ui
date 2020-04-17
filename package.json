@@ -1,6 +1,6 @@
 {
   "name": "our-ui",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一款基于tailwind 和 vue 的 UI 组件库",
   "main": "lib/our-ui.min.js",
   "files": [
