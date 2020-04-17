@@ -1,6 +1,6 @@
 {
   "name": "our-ui",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "一款基于tailwind 和 vue 的 UI 组件库",
   "main": "lib/our-ui.min.js",
   "files": [
@@ -14,7 +14,8 @@
     "dev": "webpack-dev-server --config webpack.dev.js --open",
     "build:demo": "rm -rf ./dist && cross-env NODE_ENV=production webpack --config webpack.prod.js",
     "build:lib": "rm -rf ./lib  && cross-env NODE_ENV=production LIB=true webpack --config webpack.lib.js",
-    "build:vendor": "rm -rf ./vendor  && cross-env NODE_ENV=production webpack --config webpack.vendor.js"
+    "build:vendor": "rm -rf ./vendor  && cross-env NODE_ENV=production webpack --config webpack.vendor.js",
+    "pub": "npm publish --registry  http://registry.npmjs.org"
   },
   "browserslist": [
     "> 1%",
